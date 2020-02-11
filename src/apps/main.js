@@ -1,7 +1,7 @@
 import title from '../components/title'
 import navbar from '../components/navbar'
 import {click, dblclick} from '../components/events/events.js'
-//import {SPAFullHeight} from '../components/SPAFullHeight'
+import {SPAFullHeight} from '../components/SPAFullHeight'
 import '../components/css/main.css'
 import {SPAMinHeight} from '../components/SPAMinHeight'
 import { createForm, addTextInput, addFileInput, addSelect, addCheckboxInput } from '../components/forms'
@@ -26,50 +26,5 @@ function main(){
  }).catch(err=>{
    console.log(err)
  })
- /* SPAFullHeight([
-  {
-  "title": "titreA",
-  "body": {
-    "title": "titreA1",
-    "body": [
-  {
-    "title": "Multi Example Title", 
-    "body": "This is a multiple elements display from a json file"
-  },
-  {
-    "title": "Multi Example Title", 
-    "body": "This is a multiple elements display from a json file"
-  },
-  {
-    "title": "Multi Example Title", 
-    "body": "This is a multiple elements display from a json file"
-  },
-  {
-    "title": "Multi Example Title", 
-    "body": "This is a multiple elements display from a json file"
-  },
-  {
-    "title": "Multi Example Title", 
-    "body": "This is a multiple elements display from a json file"
-  },
-  {
-    "title": "Multi Example Title", 
-    "body": "This is a multiple elements display from a json file"
-  }
-]
-    }
-  },
-  {
-  "title": "titreB",
-  "body": "text only paragraphe"
-  },
-  {
-  "title": "titreC",
-  "body": {
-    "title": "titreC1",
-    "body": "paragraphe 123"
-    }
-  }
-]) */
 }
 window.onload = main()
