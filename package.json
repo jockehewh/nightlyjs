@@ -1,0 +1,40 @@
+{
+  "name": "nightlyjs",
+  "version": "1.0.0",
+  "description": "a context based framework for building modern web applications",
+  "main": "nightly.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve": "webpack && node nightly.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jockehewh/nightlyjs.git"
+  },
+  "keywords": [
+    "web",
+    "frameword",
+    "es6",
+    "app",
+    "bundler",
+    "builder"
+  ],
+  "author": "Xavier Bélénus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jockehewh/nightlyjs/issues"
+  },
+  "homepage": "https://github.com/jockehewh/nightlyjs#readme",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}

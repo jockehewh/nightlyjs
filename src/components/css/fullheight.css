@@ -1,0 +1,21 @@
+nav, ul{
+  height: 42px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top:0;
+  background-color: white;
+  list-style-type: none;
+}
+main > div{
+  height: calc(100vh - 42px);
+  text-align: center;
+  background-color: darkblue;
+  padding-top: 42px;
+}
+main{
+  padding-top: 42px;
+  overflow-x: auto;
+}
