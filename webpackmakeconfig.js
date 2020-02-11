@@ -14,7 +14,7 @@ const makeConf = ()=>{
           filename: file.replace(/(.js)$/, '.css')
         }),
         new HtmlWebpackPlugin({
-          filename: file.replace(/(.js)$/, '.html'),
+          filename: file === 'main.js' ? 'index.html' : file.replace(/(.js)$/, '.html'),
           template: './src/indexTemplate.html'
         })
         ],
