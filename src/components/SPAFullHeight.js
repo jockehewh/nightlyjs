@@ -4,7 +4,7 @@ import './css/fullheight.css'
 import { gridElement } from './gridelements.js'
 import { gridContainer } from './gridContainer.js'
 import { container } from './container.js'
-export const SPAFullHeight = (parent, pageContent)=>{
+export const SPAFullHeight = (context, pageContent)=>{
   let linkCount = 0
   const navbar = document.createElement('nav')
   const navbarList = document.createElement('ul')
@@ -45,8 +45,8 @@ export const SPAFullHeight = (parent, pageContent)=>{
     div.classList.add('section-'+linkCount)
     linkCount++
   })
-  parent.appendChild(navbar)
-  parent.appendChild(body)
+  context.appendChild(navbar)
+  context.appendChild(body)
   linkCount = 0
   return body
 }

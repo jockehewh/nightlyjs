@@ -12,7 +12,6 @@ nav, ul{
 main > div{
   height: max-content;
   min-height: 650px;
-  text-align: center;
   width: 80vw;
   background-color: #00ff99;
   margin-left: auto;

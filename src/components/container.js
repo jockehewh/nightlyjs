@@ -1,6 +1,6 @@
-export const container = (parent, size = 'auto') =>{
+export const container = (context, size = 'auto') =>{
   let div = document.createElement('div')
   div.style.width = size
-  parent.appendChild(div)
+  context.appendChild(div)
   return div
 }

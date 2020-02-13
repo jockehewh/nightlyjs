@@ -1,5 +1,5 @@
 import './css/forms.css'
-export const createForm = (parent, id = 'form', method = 'post', action= '/')=>{
+export const createForm = (context, id = 'form', method = 'post', action= '/')=>{
   let form = document.createElement('form')
   let submitBtn = document.createElement('button')
   form.id = id
@@ -7,11 +7,11 @@ export const createForm = (parent, id = 'form', method = 'post', action= '/')=>{
   form.action = action
   submitBtn.innerText = 'submit'
   form.appendChild(submitBtn)
-  appendToFormOrBody(parent, form)
+  appendToFormOrBody(context, form)
   return form
 }
 
-export const addTextInput = (parent, type, name, label = name)=>{
+export const addTextInput = (context, type, name, label = name)=>{
   let inputContainer = document.createElement('label')
   let input = document.createElement('input')
   input.setAttribute('type', type)
@@ -19,21 +19,25 @@ export const addTextInput = (parent, type, name, label = name)=>{
   input.setAttribute('id', name)
   inputContainer.textContent = label+' '
   inputContainer.appendChild(input)
-  appendToFormOrBody(parent, inputContainer)
+  appendToFormOrBody(context, inputContainer)
   return input
 }
 
-export const addFileInput = (parent, acceptedFileMIMEType, multiple = false)=>{
+export const addFileInput = (context, name, acceptedFileMIMEType, multiple = false)=>{
   let input = document.createElement('input')
+  let inputLabel = document.createElement('label')
+  inputLabel.setAttribute('name', name)
+  inputLabel.setAttribute('for', name)
   input.setAttribute('type', 'file')
-  input.setAttribute('id', "file-upload")
+  input.setAttribute('id', name)
+  input.setAttribute('name', name)
   input.setAttribute('accept', acceptedFileMIMEType)
   input.setAttribute('multiple', multiple)
-  appendToFormOrBody(parent, input)
+  appendToFormOrBody(context, input)
   return input
 }
 
-export const addSelect = (parent, name, options)=>{
+export const addSelect = (context, name, options)=>{
   let selectContainer = document.createElement('div')
   let selectElement = document.createElement('select')
   let label = document.createElement('label')
@@ -48,12 +52,14 @@ export const addSelect = (parent, name, options)=>{
       selectElement.appendChild(opt)
     }
   })
-  appendToFormOrBody(parent, selectContainer)
+  appendToFormOrBody(context, selectContainer)
   return selectElement
 }
 
-export const addCheckboxInput = (parent, name, options)=>{
+export const addCheckboxInput = (context, name, options)=>{
   let checkboxContainer = document.createElement('div')
+  let selection = document.createElement('p')
+  selection.innerText = name+':'
   checkboxContainer.id = name
   options.forEach(option =>{
     let inputContainer = document.createElement('label')
@@ -65,14 +71,14 @@ export const addCheckboxInput = (parent, name, options)=>{
     inputContainer.appendChild(input)
     checkboxContainer.appendChild(inputContainer)
   })
-  appendToFormOrBody(parent, checkboxContainer)
+  appendToFormOrBody(context, checkboxContainer)
   return checkboxContainer
 }
 
-const appendToFormOrBody = (parent, formElement) =>{
-  if(parent.nodeName === "FORM"){
-    parent.insertBefore(formElement, parent.querySelector('button'))
+const appendToFormOrBody = (context, formElement) =>{
+  if(context.nodeName === "FORM"){
+    context.insertBefore(formElement, context.querySelector('button'))
   }else{
-    parent.appendChild(formElement)
+    context.appendChild(formElement)
   }
 }

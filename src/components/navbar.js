@@ -1,4 +1,4 @@
-export const navbar = (parent, l)=>{
+export const navbar = (context, l)=>{
   let navbar = document.createElement('nav')
   l.forEach(link=>{
     let li = document.createElement('li')
@@ -8,6 +8,6 @@ export const navbar = (parent, l)=>{
     a.href = '#'
     navbar.appendChild(li)
   })
-  parent.appendChild(navbar)
+  context.appendChild(navbar)
   return navbar
 }

@@ -4,7 +4,7 @@ import {gridElement} from './gridelements.js'
 import './css/minheight.css'
 import { gridContainer } from './gridContainer.js'
 import { container } from './container.js'
-export const SPAMinHeight = (parent, pageContent)=>{
+export const SPAMinHeight = (context, pageContent)=>{
   let linkCount = 0
   const navbar = document.createElement('nav')
   const navbarList = document.createElement('ul')
@@ -46,8 +46,8 @@ export const SPAMinHeight = (parent, pageContent)=>{
     div.classList.add('section-'+linkCount)
     linkCount++
   })
-  parent.appendChild(navbar)
-  parent.appendChild(body)
+  context.appendChild(navbar)
+  context.appendChild(body)
   navbar.querySelectorAll('a').forEach(a=>{
     a.addEventListener('click', (e)=>{
       e.preventDefault()
