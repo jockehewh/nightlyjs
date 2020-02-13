@@ -7,8 +7,11 @@ nav, ul{
   list-style-type: none;
 }
 main > div{
-  height: calc(100vh - 42px);
+  height: max-content;
+  min-height: 650px;
   text-align: center;
-  width: 100vw;
-  background-color: darkblue;
+  width: 80vw;
+  background-color: #00ff99;
+  margin-left: auto;
+  margin-right: auto;
 }

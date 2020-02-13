@@ -4,3 +4,7 @@
   --baselightGreen: #00ff99;
   --bleugreen: #66ffcc;
   }
+main{
+  height: max-content;
+  min-height: 650px;
+}

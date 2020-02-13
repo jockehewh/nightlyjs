@@ -1,3 +1,4 @@
+import './css/forms.css'
 export const createForm = (parent, id = 'form', method = 'post', action= '/')=>{
   let form = document.createElement('form')
   let submitBtn = document.createElement('button')

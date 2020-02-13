@@ -6,12 +6,7 @@ export const gridElement = (parent, element)=>{
   title(outerDiv, element.title, 3)
   paragraph(outerDiv, element.body)
   outerDiv.classList.add('is-grid-element')
+  outerDiv.style.color = '#00cc66'
   parent.appendChild(outerDiv)
   return outerDiv
-}
-
-export const squareElements = (elementList)=>{
-  elementList.forEach(element=>{
-    element.style.height = element.clientWidth+"px"
-  })
 }

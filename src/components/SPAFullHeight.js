@@ -1,14 +1,16 @@
 import { paragraph } from './paragraph.js'
 import { title } from './title'
 import './css/fullheight.css'
-import { gridElement, squareElements } from './gridelements.js'
+import { gridElement } from './gridelements.js'
+import { gridContainer } from './gridContainer.js'
+import { container } from './container.js'
 export const SPAFullHeight = (parent, pageContent)=>{
   let linkCount = 0
   const navbar = document.createElement('nav')
   const navbarList = document.createElement('ul')
   const body = document.createElement('main')
   navbar.appendChild(navbarList)
-  pageContent.forEach(section=>{
+  pageContent.forEach(async section=>{
     let li = document.createElement('li')
     let a = document.createElement('a')
     let div = document.createElement('div')
@@ -24,18 +26,18 @@ export const SPAFullHeight = (parent, pageContent)=>{
       body.appendChild(div)
     }else if(typeof section.body === 'object'){
       title(div, section.body.title, 1)
-      let sectionWrapper = document.createElement('div')
-      sectionWrapper.style.display = 'grid'
-      sectionWrapper.style.gridTemplateColumns = "1fr 1fr 1fr"
-      sectionWrapper.style.gridTemplateRows = 'auto'
       if(Array.isArray(section.body.body)){
+      let sectionWrapper = gridContainer(div, 3)
         section.body.body.forEach(article=>{
           gridElement(sectionWrapper, article)
         })
+      }else if(typeof section.body.body === 'string'){
+        let sectionWrapper = container(div)
+        paragraph(sectionWrapper, section.body.body)
       }else{
+        let sectionWrapper = container(div)
         paragraph(sectionWrapper, section.body.body)
       }
-      div.appendChild(sectionWrapper)
       div.id = section.title
       div.dataset.isLink = linkCount
       body.appendChild(div)
@@ -46,6 +48,5 @@ export const SPAFullHeight = (parent, pageContent)=>{
   parent.appendChild(navbar)
   parent.appendChild(body)
   linkCount = 0
-  squareElements(document.querySelectorAll('.is-grid-element'))
   return body
 }

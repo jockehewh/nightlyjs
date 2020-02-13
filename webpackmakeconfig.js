@@ -29,6 +29,7 @@ const makeConf = ()=>{
       output: {
         filename: file,
         path: path.resolve(__dirname, 'dist'),
+        publicPath: file === 'main.js' ? '/': '/'+ file.replace(/(.js)$/, '.html'),
       },
       stats: 'errors-only'
     })
