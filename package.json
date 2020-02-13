@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "serve": "webpack && node nightly.js"
+    "serve": "node nightly.js"
   },
   "repository": {
     "type": "git",

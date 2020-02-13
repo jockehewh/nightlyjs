@@ -1,0 +1,61 @@
+[
+  {
+  "title": "NightlyJS",
+  "body": {
+    "title": "NightlyJS",
+    "body": "A contextual framework\nFocused on simplicity and reusability\nDiscover components as functions\ncomes with webpack for fast build and easy deployement\nCreate web apps with barely no additional footprints"
+    }
+  },
+  {
+  "title": "Contextualisation",
+  "body": {
+    "title": "Think outside the box, think about the context.",
+    "body": [
+        {
+          "title": "Why the contextual approach ?", 
+          "body": "The best way to think outside the box is to know in which context the box is in."
+        },
+        {
+          "title": "Context based decisions.", 
+          "body": "NightlyJS allows you to make easier context based decisions.\ne.g. Let's say you have created multiple forms and you want to access one field in each one of them. Because NightlyJS functions returns the context of the elements it creates, you can access those elements through their context or save it in a variable for later use."
+        },
+        {
+          "title": "No footprints", 
+          "body": "NightlyJS is designed to be a non-invasive framework as it comes with zero dependencies and is entirely based on the standard DOM API."
+        },
+        {
+          "title": "lets create a new component called new form",
+          "body": ":img:./new-component.PNG:img:end"
+        }
+      ]
+    }
+  },
+  {
+  "title": "What's in the box?",
+  "body": {
+    "title": "NightlyJS in words",
+    "body": [
+      {
+          "title": "JSON compatibility", 
+          "body": "create your data models and enjoy NightlyJS versatility."
+        },
+        {
+          "title": "Fast build ready",
+          "body": "comes with all the components you need to build an app."
+        },
+        {
+          "title": "Single page apps in a blink", 
+          "body": "NightlyJS has two SPAs functions, SPAMinHeight and SPAFullHeight, just give them a JSON array! :img:./single-page-app.PNG:img:"
+        },
+        {
+          "title": "One root to serve them all", 
+          "body": "With NightlyJS you can create multiple entrypoints for your apps, create a new .js file in your apps folder."
+        },
+        {
+          "title": "What about design?",
+          "body": "import your css the JS way. :img:./cssimport.PNG:img:"
+        }
+    ]
+    }
+  }
+]
