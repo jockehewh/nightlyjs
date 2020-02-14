@@ -5,7 +5,7 @@ import { showLoader } from '../components/loader'
 import { container } from '../components/container'
 function main(){
   const loadingApp = showLoader()
-  const divone = container(document.body)
+  const divone = container(document.body, 'auto', '90vh')
  fetch('./body.json').then(res=>{
    return res.json()
  }).then(t =>{

@@ -4,6 +4,7 @@ export const gridContainer = (context = document.body, columns)=>{
       div.style.gridTemplateColumns = "1fr ".repeat(parseInt(columns))
       div.style.gridTemplateRows = 'auto'
       div.style.minHeight = 'inherit'
+      div.style.gridGap = '10px'
       context.appendChild(div)
       return div
 }

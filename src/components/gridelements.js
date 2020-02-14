@@ -6,12 +6,13 @@ export const gridElement = (context, element)=>{
   let outerDiv = document.createElement('div')
   if(/^(:img:)/.test(element.body)){
     let imgurl = element.body.split(':img:')
-    title(outerDiv, element.title, 6)
+    let orangetitle = title(outerDiv, element.title, 4)
+    orangetitle.style.color = 'var(--orange)'
     let img = addImage(outerDiv, imgurl[1], 'new component exemple')
       outerDiv.style.gridColumnStart = 1,
       outerDiv.style.gridColumnEnd = 3
       outerDiv.style.textAlign = "unset"
-      context.parentElement.style.minHeight = 'min-content'
+      //context.parentElement.style.minHeight = 'min-content'
   }else if(/(:img:)$/.test(element.body)){
       let details = element.body.split(':img:')
       title(outerDiv, element.title, 3)
