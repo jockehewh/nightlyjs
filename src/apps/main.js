@@ -2,15 +2,16 @@
 import '../components/css/main.css'
 import {SPAMinHeight} from '../components/SPAMinHeight'
 import { showLoader } from '../components/loader'
-import { container } from '../components/container'
+import { SPAFullHeight } from '../components/SPAFullHeight'
 function main(){
   const loadingApp = showLoader()
-  const divone = container(document.body, 'auto', '90vh')
- fetch('./body.json').then(res=>{
+  var appDesign = Math.floor(Math.random()*2+1)
+  fetch('./body.json').then(res=>{
    return res.json()
  }).then(t =>{
-   const appBody = SPAMinHeight(divone, t)
    loadingApp.remove()
+   if(appDesign === 1)return document.app = SPAFullHeight(document.body, t)
+   if(appDesign === 2)return document.app = SPAMinHeight(document.body, t)
  }).catch(err=>{
    console.log(err)
  })

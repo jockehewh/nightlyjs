@@ -3,7 +3,7 @@
   "title": "NightlyJS",
   "body": {
     "title": "NightlyJS",
-    "body": "A contextual framework\nFocused on simplicity and reusability\nDiscover components as functions\ncomes with webpack for fast build and easy deployement\nCreate web apps with barely no additional footprints"
+    "body": "A contextual framework\nFocused on simplicity and reusability\nDiscover components as functions\nCreate web apps with barely no additional footprints"
     }
   },
   {
@@ -17,7 +17,7 @@
         },
         {
           "title": "Context based decisions.", 
-          "body": "NightlyJS allows you to make easier context based decisions.\ne.g. Let's say you have created multiple forms and you want to access one field in each one of them. Because NightlyJS functions returns the context of the elements it creates, you can access those elements through their context or save it in a variable for later use."
+          "body": "NightlyJS allows you to make easier context based decisions or programming.\ne.g. Let's say you have multiple forms and you want to access one field in each one of them. Because NightlyJS functions returns the context of the elements it creates, you can access those elements through their context or save it in a variable for later use."
         },
         {
           "title": "No footprints", 

@@ -4,6 +4,7 @@ import './css/fullheight.css'
 import { gridElement } from './gridelements.js'
 import { gridContainer } from './gridContainer.js'
 import { container } from './container.js'
+import { animationShell } from './animation.js'
 export const SPAFullHeight = (context, pageContent)=>{
   let linkCount = 0
   const navbar = document.createElement('nav')
@@ -33,7 +34,14 @@ export const SPAFullHeight = (context, pageContent)=>{
         })
       }else if(typeof section.body.body === 'string'){
         let sectionWrapper = container(div)
-        paragraph(sectionWrapper, section.body.body)
+        if(/(:animate:)/.test(section.body.body)){
+          let p = paragraph(sectionWrapper, section.body.body.split(':animate:')[0])
+          p.style.lineHeight = 4
+          const anim = animationShell()
+          sectionWrapper.appendChild(anim)
+        }else{
+          paragraph(sectionWrapper, section.body.body)
+        }
       }else{
         let sectionWrapper = container(div)
         paragraph(sectionWrapper, section.body.body)
