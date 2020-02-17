@@ -7,9 +7,6 @@ const nightly = new Koa()
 
 const compiler = webpack(config)
 
-console.log(config[0].output)
-//nightly.use(static(__dirname + '/dist'))
-
 nightly.use(static(__dirname + '/assets'))
 
 config.forEach(page=>{
@@ -22,5 +19,5 @@ config.forEach(page=>{
 
 
 nightly.listen(9899, ()=>{
-  console.log('Listening on port 9899.')
+  console.log('Dev server listening on port 9899.')
 })

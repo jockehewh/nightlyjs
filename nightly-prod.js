@@ -6,5 +6,5 @@ nightly.use(static(__dirname + '/dist'))
 nightly.use(static(__dirname + '/assets'))
 
 nightly.listen(9899, ()=>{
-  console.log('Listening on port 9899.')
+  console.log('Prod server listening on port 9899.')
 })
