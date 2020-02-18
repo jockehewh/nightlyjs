@@ -1,16 +1,18 @@
 *{
-  margin:0; padding:0;
+  margin:0; padding:0; user-select: none; cursor: initial;
   --baseGreen : rgba(0, 204, 102, 1);
   --baselightblack:  rgba(26, 24, 27, 1);
   --darkgrey: rgba(53, 53, 49, 1);
   --white: rgba(255, 255, 255, 1);
   --orange: rgba(255, 149, 5, 1);
+  --niceblue: rgba(173, 216, 230, 1);
   }
   body{
     background-color: var(--baselightblack);
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Coda-Regular';
   }
 main{
   width: 90vw;
@@ -18,5 +20,35 @@ main{
   min-height: 550px;
 }
 a{
-  color: var(--white)
+  color: var(--white);
+  cursor: initial;
+}
+a:hover{
+  cursor: pointer;
+}
+
+.section-0{
+  text-align: center;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-0 h1{
+  font-family: 'PermanentMarker';
+}
+
+.section-1 h3, .section-2 h3{
+  color: var(--niceblue);
+}
+p span{
+  transition: top .2s, color .2s, font-weight .2s;
+  position: relative;
+  top: 0;
+}
+
+p span:hover{
+  top: -5px;
+  color: var(--baseGreen);
+  font-weight: bold;
 }
