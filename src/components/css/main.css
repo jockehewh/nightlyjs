@@ -111,3 +111,26 @@ li a:hover{
 .section-1 div{
   min-height: min-content !important;
 }
+.is-grid{
+  display: grid;
+  grid-template-rows: auto;
+  min-height: inherit;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+@media viewport and (max-width: 415px) and (orientation: portrait) {
+  body {
+    /* font-size: 42px; */
+  }
+  div>.is-grid-element{
+    height: 20vh;
+  }
+  main{
+    width:100vw;
+  }
+  .is-grid{
+    display: flex;
+    flex-direction: column;
+  }
+}
