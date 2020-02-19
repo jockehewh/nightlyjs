@@ -2,7 +2,7 @@ nav{
   height: 42px;
   display: flex;
   justify-content: flex-end;
-  width: 80vw;
+  width: 84vw;
   position: fixed;
   top:0;
   background-color: var(--darkgrey);
@@ -42,12 +42,6 @@ li a:hover{
   color: var(--baseGreen);
   text-transform: uppercase;
   text-decoration: none;
-}
-.section-0{
-  text-align: center;
-}
-.section-0 h1{
-  margin-top: 32px;
 }
 .section-0 p{
   line-height: 4;

@@ -35,24 +35,10 @@ export const SPAMinHeight = (context, pageContent)=>{
         })
       }else if(typeof section.body.body === 'string'){
         let sectionWrapper = container(div)
-         if(/(:animate:)/.test(section.body.body)){
-          let p = paragraph(sectionWrapper, section.body.body.split(':animate:')[0])
-          p.style.lineHeight = 4
-          const anim = animationShell()
-          sectionWrapper.appendChild(anim)
-        }else{
-          paragraph(sectionWrapper, section.body.body)
-        }
+        paragraph(sectionWrapper, section.body.body)
       }else{
         let sectionWrapper = container(div)
-        if(/(:animate:)/.test(section.body.body)){
-          alert('all good')
-          paragraph(sectionWrapper, section.body.body.split(':animate:')[0])
-          const anim = animationShell()
-          sectionWrapper.appendChild(anim)
-        }else{
-          paragraph(sectionWrapper, section.body.body)
-        }
+        paragraph(sectionWrapper, section.body.body)
         
       }
       div.id = section.title

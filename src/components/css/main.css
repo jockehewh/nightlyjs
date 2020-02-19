@@ -8,7 +8,7 @@
   --niceblue: rgba(173, 216, 230, 1);
   }
   body{
-    background-color: var(--baselightblack);
+    background-color: var(--darkgrey);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,6 +18,8 @@ main{
   width: 90vw;
   height: max-content;
   min-height: 550px;
+  position: relative;
+  top: 32px;
 }
 a{
   color: var(--white);
@@ -29,10 +31,18 @@ a:hover{
 
 .section-0{
   text-align: center;
-  min-height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.section-0, .section-1, .section-2{
+  border-radius: 5px;
+  background: #353531;
+  box-shadow: 5px -5px 10px #151514, 
+              -5px 5px 10px #55554e;
+  padding: 42px 16px 16px 16px;
+  margin-top: 42px;
+  margin-bottom: 16px;
 }
 .section-0 h1{
   font-family: 'PermanentMarker';
@@ -51,4 +61,26 @@ p span:hover{
   top: -5px;
   color: var(--baseGreen);
   font-weight: bold;
+}
+p{
+  padding: 16px;
+  border-radius: 5px;
+  background: #353531;
+  box-shadow: inset 5px -5px 10px #151514, 
+              inset -5px 5px 10px #55554e;
+}
+li{
+  padding: 5px;
+  border-radius: 5px;
+  background: #353531;
+  box-shadow: 5px -5px 10px #151514, 
+              -5px 5px 10px #55554e;
+}
+nav{
+  z-index: 1;
+  border-radius: 5px;
+  background: #353531;
+  box-shadow: 5px -5px 10px #151514, 
+              -5px 5px 10px #55554e;
+  margin: 16px 0;
 }
