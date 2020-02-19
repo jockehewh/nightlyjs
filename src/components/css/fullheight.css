@@ -6,6 +6,7 @@ nav{
   position: fixed;
   top:0;
   background-color: var(--darkgrey);
+  padding: 0 16px;
 }
 ul{
   height: 42px;
@@ -26,26 +27,4 @@ main > div{
 }
 main{
   overflow-x: auto;
-}
-li{
-  margin: 10px;
-  transition: font-size 1s, color 1s;
-  color: white;
-}
-li:hover{
-  font-size: larger;
-}
-li a{
-  transition: color 1s, text-decoration 1s;
-}
-li a:hover{
-  color: var(--baseGreen);
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.section-0 p{
-  line-height: 4;
-}
-.section-1 div{
-  min-height: min-content !important;
 }

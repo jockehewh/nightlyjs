@@ -24,6 +24,7 @@ main{
 a{
   color: var(--white);
   cursor: initial;
+  text-shadow: white 3px -1px 5px;
 }
 a:hover{
   cursor: pointer;
@@ -40,19 +41,20 @@ a:hover{
   background: #353531;
   box-shadow: 5px -5px 10px #151514, 
               -5px 5px 10px #55554e;
-  padding: 42px 16px 16px 16px;
+  padding: 56px 16px 16px 16px;
   margin-top: 42px;
   margin-bottom: 16px;
 }
 .section-0 h1{
   font-family: 'PermanentMarker';
+  text-shadow: none;
 }
 
 .section-1 h3, .section-2 h3{
   color: var(--niceblue);
 }
 p span{
-  transition: top .2s, color .2s, font-weight .2s;
+  transition: top .2s, color .2s, font-weight .2s, text-shadow .2s;
   position: relative;
   top: 0;
 }
@@ -61,15 +63,17 @@ p span:hover{
   top: -5px;
   color: var(--baseGreen);
   font-weight: bold;
+  text-shadow: var(--baseGreen) 3px -1px 5px;
 }
 p{
+  text-shadow: white 3px -1px 5px;
   padding: 16px;
   border-radius: 5px;
   background: #353531;
   box-shadow: inset 5px -5px 10px #151514, 
               inset -5px 5px 10px #55554e;
 }
-li{
+li, img{
   padding: 5px;
   border-radius: 5px;
   background: #353531;
@@ -83,4 +87,27 @@ nav{
   box-shadow: 5px -5px 10px #151514, 
               -5px 5px 10px #55554e;
   margin: 16px 0;
+}
+li{
+  margin: 10px;
+  transition: font-size .1s, color .1s;
+  color: white;
+}
+li:hover{
+  font-size: larger;
+}
+li a{
+  transition: color .1s, text-decoration .1s, text-shadow .1s;
+}
+li a:hover{
+  color: var(--baseGreen);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: var(--baseGreen) 3px -2px 5px;
+}
+.section-0 p{
+  line-height: 4;
+}
+.section-1 div{
+  min-height: min-content !important;
 }
