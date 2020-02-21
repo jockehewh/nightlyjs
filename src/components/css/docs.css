@@ -36,7 +36,7 @@ p{
   border-radius: 5px;
   text-shadow: white 3px -1px 5px;
   padding: 20px 20px 20px 10px;
-    box-shadow: -5px 5px 10px #151514, 5px -5px 10px #55554e;
+  box-shadow: inset 5px -5px 10px #151514, inset -5px 5px 10px #55554e;
     width: fit-content;
     position: relative;
     left: 16px;
@@ -75,4 +75,5 @@ h1{
 .intro{
   position: unset;
   margin: 20px 20px 20px 0;
+  box-shadow: -5px 5px 10px #151514, 5px -5px 10px #55554e;
 }

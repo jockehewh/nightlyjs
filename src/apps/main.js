@@ -3,6 +3,7 @@ import '../components/css/main.css'
 import {SPAMinHeight} from '../components/SPAMinHeight'
 import { showLoader } from '../components/loader'
 import { SPAFullHeight } from '../components/SPAFullHeight'
+import { navigationLink } from '../components/linkmaker'
 async function main(){
   const loadingApp = showLoader()
   var appDesign = Math.floor(Math.random()*2+1)
@@ -22,7 +23,9 @@ async function main(){
   sectionOneText.forEach(element=>{
     app.querySelector('.section-0 p').appendChild(element)
   })
-
+  let li = document.createElement('li')
+  let docsLink = navigationLink(li, 'Docs', '/docs.html')
+  document.querySelector('nav ul').appendChild(li)
 
 }).catch(err=>{
    console.log(err)

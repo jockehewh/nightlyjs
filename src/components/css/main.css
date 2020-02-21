@@ -73,6 +73,11 @@ p{
   box-shadow: inset 5px -5px 10px #151514, 
               inset -5px 5px 10px #55554e;
 }
+a>h1{
+  text-shadow: none;
+  font-family: 'permanentMarker';
+  cursor: pointer;
+}
 li, img{
   padding: 5px;
   border-radius: 5px;

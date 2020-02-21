@@ -54,6 +54,10 @@
         {
           "title": "What about design?",
           "body": "import your css the JS way. :img:./cssimport.PNG:img:"
+        },
+        {
+          "title": "The docs are comming!",
+          "body": "But for now i can offer you a walk-through :link:./docs.html:link:"
         }
     ]
     }
