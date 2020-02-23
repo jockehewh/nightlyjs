@@ -5,12 +5,10 @@ const config = require('./webpack.config.js')
 const webpackDevMiddleware = require('koa-webpack-dev-middleware')
 const nightly = new Koa()
 
-const compiler = webpack(config)
-
 nightly.use(static(__dirname + '/assets'))
 
 config.forEach(page=>{
-  nightly.use(webpackDevMiddleware(compiler,{
+  nightly.use(webpackDevMiddleware(webpack(config),{
     quiet: true,
     stats: {colors: true},
     publicPath: page.output.publicPath,

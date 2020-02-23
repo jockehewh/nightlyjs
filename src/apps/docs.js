@@ -117,7 +117,7 @@ const docobj = {
       parameters: ['DOMElement: context', 'String: name', '[String]: array of options']
     },
     {
-      name: 'forms.js > addCheckbocXinput',
+      name: 'forms.js > addCheckboxInput',
       description: 'add checkbox input to the provided context.',
       parameters: ['DOMElement: context', 'String: name', '[String]: array of options']
     }
