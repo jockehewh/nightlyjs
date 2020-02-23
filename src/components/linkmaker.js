@@ -14,3 +14,11 @@ export const linkElements = (link, target, label) =>{
     return {isData, message}
   }
 }
+
+export const navigationLink = (context, linktext, destination) =>{
+  let a = document.createElement('a')
+  a.innerText = linktext
+  a.href = destination
+  context.appendChild(a)
+  return a
+}

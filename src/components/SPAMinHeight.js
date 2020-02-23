@@ -4,6 +4,7 @@ import {gridElement} from './gridelements.js'
 import './css/minheight.css'
 import { gridContainer } from './gridContainer.js'
 import { container } from './container.js'
+import { animationShell } from './animation.js'
 export const SPAMinHeight = (context, pageContent)=>{
   let linkCount = 0
   const navbar = document.createElement('nav')
@@ -38,6 +39,7 @@ export const SPAMinHeight = (context, pageContent)=>{
       }else{
         let sectionWrapper = container(div)
         paragraph(sectionWrapper, section.body.body)
+        
       }
       div.id = section.title
       div.dataset.isLink = linkCount
