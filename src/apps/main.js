@@ -3,7 +3,7 @@ import '../components/css/main.css'
 import {SPAMinHeight} from '../components/SPAMinHeight'
 import { showLoader } from '../components/loader'
 import { SPAFullHeight } from '../components/SPAFullHeight'
-import { navigationLink } from '../components/linkmaker'
+import { navigationLink } from '../components/linkMaker'
 async function main(){
   const loadingApp = showLoader()
   var appDesign = Math.floor(Math.random()*2+1)

@@ -1,7 +1,7 @@
 import '../components/css/docs.css'
 import {container} from '../components/container'
 import { title } from '../components/title'
-import { navigationLink } from '../components/linkmaker'
+import { navigationLink } from '../components/linkMaker'
 import { paragraph } from '../components/paragraph'
 
 function docs(){
