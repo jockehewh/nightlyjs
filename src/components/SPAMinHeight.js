@@ -1,6 +1,6 @@
 import { paragraph } from './paragraph.js'
 import { title } from './title'
-import {gridElement} from './gridelements.js'
+import {gridElement} from './gridElements.js'
 import './css/minheight.css'
 import { gridContainer } from './gridContainer.js'
 import { container } from './container.js'

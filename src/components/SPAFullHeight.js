@@ -1,7 +1,7 @@
 import { paragraph } from './paragraph.js'
 import { title } from './title'
 import './css/fullheight.css'
-import { gridElement } from './gridelements.js'
+import { gridElement } from './gridElements.js'
 import { gridContainer } from './gridContainer.js'
 import { container } from './container.js'
 import { animationShell } from './animation.js'
