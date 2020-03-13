@@ -1,7 +1,7 @@
 import { paragraph } from "./paragraph"
 import { title } from "./title"
 import { addImage } from './addImage.js'
-import { navigationLink } from "./linkmaker"
+import { navigationLink } from "./linkMaker"
 
 export const gridElement = (context, element)=>{
   let outerDiv = document.createElement('div')

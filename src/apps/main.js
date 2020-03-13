@@ -26,7 +26,11 @@ async function main(){
   let li = document.createElement('li')
   let docsLink = navigationLink(li, 'Docs', '/docs.html')
   document.querySelector('nav ul').appendChild(li)
-
+  let gitli = document.createElement('li')
+  let gitLink = navigationLink(gitli, 'Github', 'https://github.com/jockehewh/nightlyjs')
+  gitLink.target = "_blank"
+  gitLink.referrerPolicy = 'no-referrer'
+  document.querySelector('nav ul').appendChild(gitli)
 }).catch(err=>{
    console.log(err)
  })
