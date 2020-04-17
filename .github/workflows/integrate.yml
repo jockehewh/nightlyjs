@@ -1,0 +1,17 @@
+name: Nightly Live Continuous Integration
+
+on:
+  push:
+    branches: [live]
+  
+jobs:
+  build_website:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm run build
+      - run: pm2 reload nightly
