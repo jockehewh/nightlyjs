@@ -9,8 +9,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: |
-        cd ~/nightlyjs
-        pwd
-        ls
-        pm2 status
-        git pull 
+          cd ~/nightlyjs
+          pwd
+          ls
+          pm2 status
+          git pull 
