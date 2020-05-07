@@ -8,9 +8,9 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      env:
-        pass: "fnumgoin"
-      - run: |
+      - env:
+          pass: "fnumgoin"
+      run: |
           cd ~/nightlyjs
           pwd
           ls
