@@ -8,8 +8,7 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      - name: pull request
-        run: |
+      - run: |
           cd ~/nightlyjs
           pwd
           ls
