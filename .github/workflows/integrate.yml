@@ -8,9 +8,9 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      name: Pull action
+      - shell: bash
       with:
-        super_secret: fnumgoin
+        super_secret: "fnumgoin"
       run: |
         cd ~/nightlyjs
         pwd
