@@ -7,10 +7,10 @@ on:
 jobs:
   build_website:
     runs-on: self-hosted
+    env:
+      pass: "fnumgoin"
     steps:
-      - env:
-          pass: "fnumgoin"
-      run: |
+      - run: |
           cd ~/nightlyjs
           pwd
           ls
