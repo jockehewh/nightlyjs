@@ -11,5 +11,5 @@ jobs:
       - run: |
           cd ~/nightlyjs
           pwd
-      - run: ls
-      - run: pm2 status
+          ls
+          pm2 status
