@@ -8,7 +8,7 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      - name: Pull action
+      name: Pull action
       id: pull-action-perso
       uses: fountainhead/action-wait-for-check@v1.0.0
       - shell: bash
