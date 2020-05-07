@@ -8,7 +8,7 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      - uses: actions/exec
+      - uses: @actions/exec
       - run: pwd
       - run: ls
       - run: pm2 status
