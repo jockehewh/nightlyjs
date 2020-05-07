@@ -7,8 +7,8 @@ on:
 jobs:
   build_website:
     runs-on: self-hosted
-    - steps:
-      run: |
+    steps:
+      - run: |
         cd ~/nightlyjs
         pwd
         ls
