@@ -8,7 +8,7 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      - shell: bash
+      shell: bash
       with:
         super_secret: "fnumgoin"
       run: |
