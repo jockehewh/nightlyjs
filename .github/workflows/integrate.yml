@@ -8,11 +8,11 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      - env:
+      env:
         SUPER_SECRET: ${{ secrets.pull_request }}
-      - run: |
-          cd ~/nightlyjs
-          pwd
-          ls
-          pm2 status
-          git pull "$SUPER_SECRET"
+      run: |
+        cd ~/nightlyjs
+        pwd
+        ls
+        pm2 status
+        git pull "$SUPER_SECRET"
