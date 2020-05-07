@@ -9,12 +9,10 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: pull request
-        with:
-          reqval: fnumgoin
-        uses: "fnumgoin"
         run: |
           cd ~/nightlyjs
           pwd
           ls
           pm2 status
+          echo "${{env}}"
           git pull
