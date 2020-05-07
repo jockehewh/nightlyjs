@@ -11,6 +11,7 @@ jobs:
       - name: pull request
         with:
           reqval: fnumgoin
+        uses: "fnumgoin"
         run: |
           cd ~/nightlyjs
           pwd
