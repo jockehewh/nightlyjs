@@ -15,4 +15,4 @@ jobs:
           pm2 status
           git pull
       - with: 
-          myinput: "fnumgoin"
+          myinput: ${{"fnumgoin"}}
