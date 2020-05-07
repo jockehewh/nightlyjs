@@ -15,5 +15,5 @@ jobs:
           pwd
           ls
           pm2 status
-          echo "${{env.pass}}"
+          echo "{{$env.pass}}"
           git pull
