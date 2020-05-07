@@ -8,11 +8,11 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      - with: 
-        myinput: "fnumgoin"
       - run: |
           cd ~/nightlyjs
           pwd
           ls
           pm2 status
-          git pull 
+          git pull
+      - with: 
+        myinput: "fnumgoin"
