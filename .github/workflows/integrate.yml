@@ -8,9 +8,6 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      shell: bash
-      with:
-        super_secret: "fnumgoin"
       run: |
         cd ~/nightlyjs
         pwd
