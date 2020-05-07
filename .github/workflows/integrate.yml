@@ -13,5 +13,4 @@ jobs:
           pwd
           ls
           pm2 status
-          git pull
-          npm run build
+          whoami
