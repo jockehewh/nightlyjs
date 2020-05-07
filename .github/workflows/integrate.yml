@@ -9,8 +9,8 @@ jobs:
     runs-on: self-hosted
     steps:
       name: Pull action
-      id: pull-action-perso
-      uses: fountainhead/action-wait-for-check@v1.0.0
+      with:
+        super_secret: fnumgoin
       - shell: bash
         run: |
           cd ~/nightlyjs
@@ -18,6 +18,3 @@ jobs:
           ls
           pm2 status
           git pull 
-      - name: Action required
-      - if: steps.pull-action-perso.outputs.conclusion == "action_required"
-        fnumgoin
