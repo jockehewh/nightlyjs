@@ -8,8 +8,8 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
-      - inputs: 
-          myinput: "fnumgoin"
+      inputs: 
+        myinput: "fnumgoin"
       - run: |
           cd ~/nightlyjs
           pwd
