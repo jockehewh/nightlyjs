@@ -8,6 +8,7 @@ jobs:
   build_website:
     runs-on: self-hosted
     steps:
+      - run: cd ~/nightlyjs
       - run: pwd
       - run: ls
       - run: pm2 status
